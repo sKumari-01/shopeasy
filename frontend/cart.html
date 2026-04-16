@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cart - ShopEase</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo"><span class="logo-icon">&#128717;</span><span>ShopEase</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="clothes.html">Clothes</a>
+      <a href="shoes.html">Shoes</a>
+      <a href="electronics.html">Electronics</a>
+      <a href="books.html">Books</a>
+    </nav>
+    <div class="nav-actions">
+      <form class="search-form" onsubmit="handleSearch(event)">
+        <input type="search" id="searchInput" placeholder="Search products..."/>
+        <button type="submit">&#128269;</button>
+      </form>
+      <a href="cart.html" class="cart-btn">&#128722; Cart <span class="cart-count" id="cartCount">0</span></a>
+    </div>
+  </div>
+</header>
+
+<div class="cart-wrapper">
+  <h1 class="cart-title">Your Shopping Cart</h1>
+  <div class="cart-layout">
+    <div id="cartContent">Loading...</div>
+    <div class="order-summary">
+      <h3>Order Summary</h3>
+      <div class="summary-row"><span>Subtotal</span><strong id="summarySubtotal">&#8377;0</strong></div>
+      <div class="summary-row"><span>Shipping</span><strong style="color:#16a34a">Free</strong></div>
+      <div class="summary-row"><span>Tax (GST)</span><strong>Inclusive</strong></div>
+      <hr class="summary-divider"/>
+      <div class="summary-total">
+        <span class="summary-total-label">Total</span>
+        <span class="summary-total-value" id="summaryTotal">&#8377;0</span>
+      </div>
+      <button class="checkout-btn">Proceed to Checkout &#8594;</button>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div><h3>ShopEase</h3><p>Your premium destination for the finest Indian products.</p></div>
+    <div><h4>Categories</h4><a href="clothes.html">Clothes</a><a href="shoes.html">Shoes</a><a href="electronics.html">Electronics</a><a href="books.html">Books</a></div>
+    <div><h4>Help</h4><a href="#">Contact Us</a><a href="#">Shipping Policy</a></div>
+  </div>
+  <p class="footer-copy">&copy; 2025 ShopEase India. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+<script>loadCart(); updateCartCount();</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShopEase - Celebrate Style, Discover India</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo"><span class="logo-icon">&#128717;</span><span>ShopEase</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="clothes.html">Clothes</a>
+      <a href="shoes.html">Shoes</a>
+      <a href="electronics.html">Electronics</a>
+      <a href="books.html">Books</a>
+    </nav>
+    <div class="nav-actions">
+      <form class="search-form" onsubmit="handleSearch(event)">
+        <input type="search" id="searchInput" placeholder="Search products..."/>
+        <button type="submit">&#128269;</button>
+      </form>
+      <a href="cart.html" class="cart-btn">&#128722; Cart <span class="cart-count" id="cartCount">0</span></a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">&#10024; The Grand Indian Festival Sale is Live</div>
+    <h1>Celebrate Style.<br/><em>Discover India.</em></h1>
+    <p>Your premium destination for vibrant fashion, cutting-edge electronics, and inspiring literature.</p>
+    <div class="hero-buttons">
+      <a href="clothes.html" class="btn btn-primary">Shop the Sale &#8594;</a>
+      <a href="#categories" class="btn btn-outline">Explore Categories</a>
+    </div>
+  </div>
+</section>
+
+<section class="features">
+  <div class="feature"><span>&#128666;</span><div><strong>Free Express Delivery</strong><p>Across India on orders over &#8377;999</p></div></div>
+  <div class="feature"><span>&#9989;</span><div><strong>100% Authentic</strong><p>Verified original products</p></div></div>
+  <div class="feature"><span>&#127991;</span><div><strong>Best Price Guarantee</strong><p>Unbeatable deals and offers</p></div></div>
+</section>
+
+<section class="categories" id="categories">
+  <h2>Shop by Category</h2>
+  <div class="category-grid">
+    <a href="clothes.html" class="category-card" style="background:linear-gradient(135deg,#ec4899,#e11d48)">
+      <span>&#128247;</span><h3>Clothes</h3><p>8 Products</p>
+    </a>
+    <a href="shoes.html" class="category-card" style="background:linear-gradient(135deg,#f97316,#d97706)">
+      <span>&#128247;</span><h3>Shoes</h3><p>8 Products</p>
+    </a>
+    <a href="electronics.html" class="category-card" style="background:linear-gradient(135deg,#3b82f6,#4f46e5)">
+      <span>&#128247;</span><h3>Electronics</h3><p>8 Products</p>
+    </a>
+    <a href="books.html" class="category-card" style="background:linear-gradient(135deg,#10b981,#0f766e)">
+      <span>&#128247;</span><h3>Books</h3><p>8 Products</p>
+    </a>
+  </div>
+</section>
+
+<section class="products-section">
+  <h2>Trending Now</h2>
+  <div class="tab-buttons">
+    <button class="tab-btn active" onclick="loadTab('clothes', this)">Clothes</button>
+    <button class="tab-btn" onclick="loadTab('shoes', this)">Shoes</button>
+    <button class="tab-btn" onclick="loadTab('electronics', this)">Electronics</button>
+    <button class="tab-btn" onclick="loadTab('books', this)">Books</button>
+  </div>
+  <div class="product-grid" id="productGrid"></div>
+</section>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div><h3>ShopEase</h3><p>Your premium destination for the finest Indian products. Vibrant, authentic, curated for you.</p></div>
+    <div><h4>Categories</h4><a href="clothes.html">Clothes</a><a href="shoes.html">Shoes</a><a href="electronics.html">Electronics</a><a href="books.html">Books</a></div>
+    <div><h4>Customer Service</h4><a href="#">Contact Us</a><a href="#">Shipping Policy</a><a href="#">Returns & Exchanges</a><a href="#">FAQs</a></div>
+  </div>
+  <p class="footer-copy">&copy; 2025 ShopEase India. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  loadTab('clothes', document.querySelector('.tab-btn.active'));
+  updateCartCount();
+</script>
+</body>
+</html>
