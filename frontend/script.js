@@ -1,4 +1,4 @@
-const API = 'http://localhost:3000';
+const API = 'https://shopeasy-1-sxhy.onrender.com';
 
 function formatRupee(amount) {
   return new Intl.NumberFormat('en-IN', {
